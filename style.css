@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+/* }
+html{
+
+
+}
+a{
+
+}
+li{
+
+}
+ul{
+
+}
+div{
+
+}
+span{
+
+} */
+/* global variabl declare */
+:root{
+    --papu: rgb(10, 3, 75);
+    --bgmain: #fff;
+}
+::selection{
+    color: #f00;
+    background-color: #f0f;
+}
+/* ::-webkit-scrollbar{
+    display: none;
+} */
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--papu);
+}
+.card{
+    position: relative;
+    width: 200px;
+    height:300px;
+    transform-style: preserve-3d;
+}
+.card .face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: 1.5s ease-in-out;
+    transform:perspective(500px) rotateY(0deg);
+}
+.card .face.front{
+    background: #0f0;
+}
+.card:hover .face.front{
+    transform:perspective(500px) rotateY(180deg);
+}
+.card .face.back{
+    background: #0ff;
+    color: aliceblue;
+    transform:perspective(500px) rotateY(180deg);
+}
+.card:hover .face.back{
+    transform:perspective(500px) rotateY(360deg);
+}
+.card .face h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    transform: perspective(500px) translateZ(50px);
+}
