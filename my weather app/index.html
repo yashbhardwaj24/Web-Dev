@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- title icon  -->
+    <link rel="icon" href="./images/title_image.png" type="icon">
+
+    <!-- linking my styling sheet  -->
+    <link rel="stylesheet" href="./style/styles.css">
+
+    <!-- linking my fontawesome link for icon  -->
+    <script src="https://kit.fontawesome.com/96c0e606a7.js" crossorigin="anonymous"></script>
+
+    <!-- linking jquery cdn   -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slidebarbtn').click(function(){
+                $('.slidebarbtn').toggleClass('active');
+                $('.header01').toggleClass('enjoy');
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <!-- my header section start here  -->
+    <header class="header01">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Term</a></li>
+        </ul>
+        <button class="slidebarbtn">
+            <div class="hamburger">
+
+            </div>
+        </button>
+    </header>
+    <!-- my header section ends here  -->
+
+
+    <div class="app-main" id="box">
+        <div class="searchInputBox">
+            <input type="text" id="input-box" class="input-box" placeholder="Enter city name..." autocomplete="off">
+        </div>
+
+        <div class="weather-body">
+            <div class="location-details">
+                <div class="city" id="city">Amravati, IN</div>
+                <div class="date" id="date">10 June (Wednesday) 2020</div>
+            </div>
+
+            <div class="weather-status">
+                <div class="temp" id="temp">34&deg;C</div>
+                <div class="min-max" id="min-max">32&deg;C (min) / 34&deg;C (max)</div>
+                <div class="weather" id="weather">Clear</div>
+                <div id="img"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+    <!-- linking vanilla tilt js  -->
+    <script src="./js/vanilla.js"></script>
+</body>
+
+</html>

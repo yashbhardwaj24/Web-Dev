@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://source.unsplash.com/1600x900/?nature,water);
+    height: 100vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: top center;
+    font-family: sans-serif;
+    background-size: cover;
+}
+body::before
+{
+    content: 'Weather App';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+    font-weight: 400;
+    color: white;
+    font-family: sans-serif;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+body::after{
+    content: 'Made by -> NHK🥰';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    /* transform: translateX(-50%); */
+    font-size: 1.5em;
+    font-weight: 400;
+    color: white;
+    font-family: cursive;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+
+/* styling my header part bro  */
+header{
+    position: absolute;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #262626;
+    transition: 0.3s;
+}
+header.enjoy{
+    left: 0;
+}
+ul{
+    margin: 60px 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+ul li a:hover{
+    background: #fff;
+    color: #262626;
+}
+.slidebarbtn{
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+}
+.hamburger{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    transition: 0.3s;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    height: 3px;
+    background: #262626;
+}
+.hamburger::after{
+    top: 12px;
+}
+.hamburger::before{
+    top: -12px;
+}
+.hamburger::after,
+.hamburger::before{
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 3px;background: #262626;
+    left: 0;
+    transition: 0.3s;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.slidebarbtn.active .hamburger{
+    background: none;
+    box-shadow: none;
+}
+.slidebarbtn.active .hamburger::after{
+    top: 0;
+    transform: rotate(-45deg);
+}
+.slidebarbtn.active .hamburger::before{
+    top: 0;
+    transform: rotate(45deg);
+}
+
+/* my header section sends here  */
+
+
+
+
+
+
+.app-main {
+    width: 50vh;
+    margin: 100px auto;
+    background-color: #000000d0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.app-main > * {
+    margin-bottom: 15px;
+    
+}
+.input-box {
+    width: 100%;
+    background-color: rgba(255,255,255,0.6);
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.2rem;
+    height: 50px;
+    border-radius: 5px;
+    padding: 0 10px;
+    text-align: left;
+    background: #7c7c7c2b;
+}
+.input-box:focus::placeholder {
+    color: transparent;
+}
+.input-box:focus{
+    background: #7c7c7c2b;
+}
+.input-box:focus {
+    /* background-color: rgba(255,255,255); */
+    color: #fff;
+}
+.weather-body {
+    display: none;
+    user-select: none;
+    color: #fff;
+    padding: 20px;
+    line-height: 2rem;
+    border-radius: 10px;
+    background-color: #7c7c7c2b;
+    height: 47vh;
+}
+
+.location-details {
+    font-weight: bold;
+}
+.weather-status {
+    padding: 20px;
+}
+.temp {
+    font-size: 50pt;
+    font-weight: 700;
+    margin: 20px 0;
+    text-shadow: 2px 4px rgba(0,0,0,0.3);
+}
+.min-max, .weather {
+    font-size: 12pt;
+    font-weight: 600;
+}
